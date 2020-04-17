@@ -8,8 +8,6 @@ Dashboards can by dynamically configured to fit your perfect look.
 
 ![demo](docs/demo.gif)
 
----
-
 ## Getting Started
 
 ```bash
