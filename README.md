@@ -4,7 +4,7 @@ GoBadge is an open source project for displaying information via SVG "badges". G
 
 &nbsp;
 
-Dashboards can by dynamically configured to fit your perfect look.
+Dashboards can be dynamically configured to fit your perfect look.
 
 ![demo](docs/demo.gif)
 
