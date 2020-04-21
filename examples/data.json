@@ -1,0 +1,44 @@
+{
+    "badges": [
+        {
+            "label": "stable release",
+            "tag": "v2.8.8",
+            "color": "green"
+        },
+        {
+            "label": "build",
+            "tag": "passsing",
+            "color": "green"
+        },
+        {
+            "label": "issues",
+            "tag": "3 open",
+            "color": "gray"
+        },
+        {
+            "label": "unit test",
+            "tag": "pass",
+            "color": "green"
+        },
+        {
+            "label": "total tests",
+            "tag": "118",
+            "color": "gray"
+        },
+        {
+            "label": "code quality",
+            "tag": "A | A | B",
+            "color": "amber"
+        },
+        {
+            "label": "pull requests",
+            "tag": "4 open, 1 closed",
+            "color": "gray"
+        },
+        {
+            "label": "vulnerabilities",
+            "tag": "0 known",
+            "color": "green"
+        }
+    ]
+}
