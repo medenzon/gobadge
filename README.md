@@ -58,7 +58,6 @@ var dashboard = func(writer http.ResponseWriter, request *http.Request) {
             "tag": "v2.8.8",
             "color": "green"
         },
-        ...
         {
             "label": "build",
             "tag": "passsing",
