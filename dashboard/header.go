@@ -2,7 +2,6 @@ package dashboard
 
 import (
 	"fmt"
-	"strings"
 
 	geo "github.com/medenzon/gobadge/dashboard/svg/geometry"
 	"github.com/medenzon/gobadge/dashboard/svg/shapes"
@@ -46,7 +45,7 @@ func (view View) DrawHeader() error {
 
 	filter := stockTextFilter()
 
-	titleStyle := style.Text{ID: "title", Filter: filter, Text: titleText}
+	titleStyle := style.Text{Filter: filter, Text: titleText}
 
 	output := []string{
 		gradient.Vectorize(),
@@ -55,19 +54,6 @@ func (view View) DrawHeader() error {
 		titleText.Vectorize(),
 		titleStyle.Vectorize(),
 	}
-
-	strings.Join(
-		[]string{
-			`<g id="header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">`,
-			`<defs>`,
-			gradient.Vectorize(),
-			`</defs>`,
-			`<g>`,
-			gradientRect.Vectorize(),
-			fillRect.Vectorize(),
-			`</g>`,
-			`</g>`,
-		}, "\n")
 
 	_, err := fmt.Fprint(view.Canvas.Writer, output)
 
