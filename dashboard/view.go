@@ -1,6 +1,8 @@
 package dashboard
 
-import "github.com/medenzon/gobadge/dashboard/svg"
+import (
+	"gobadge/svg"
+)
 
 type View struct {
 	Canvas  *svg.Canvas
@@ -11,7 +13,7 @@ type View struct {
 
 type Header struct {
 	Title  string `json:"title"`
-	Detail string `json:"title"`
+	Detail string `json:"detail"`
 }
 
 func (view *View) Draw() {

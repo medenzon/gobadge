@@ -1,8 +1,8 @@
 package style
 
 import (
-	"github.com/medenzon/gobadge/dashboard/svg/shapes"
 	"fmt"
+	"gobadge/svg/shapes"
 	"strings"
 )
 

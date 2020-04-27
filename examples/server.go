@@ -7,9 +7,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/gorilla/mux"
-	dash "github.com/medenzon/gobadge/dashboard"
-	"github.com/medenzon/gobadge/dashboard/svg"
+	dash "gobadge/dashboard"
+	"gobadge/svg"
 )
 
 type data struct {
@@ -21,7 +20,7 @@ func new(canvas *svg.Canvas, columns int) dash.View {
 	file, err := ioutil.ReadFile("data.json")
 
 	if err != nil {
-		log.Printf("readfile error %v")
+		log.Printf("readfile error %v", err)
 	}
 
 	var data data
@@ -31,7 +30,7 @@ func new(canvas *svg.Canvas, columns int) dash.View {
 	err = json.Unmarshal(file, &data)
 
 	if err != nil {
-		log.Printf("unmarshal error %v")
+		log.Printf("unmarshal error %v", err)
 	}
 
 	return dash.View{
@@ -64,12 +63,9 @@ var dashboard = func(writer http.ResponseWriter, request *http.Request) {
 
 func main() {
 
-	// create new http router
-	router := mux.NewRouter()
-
 	// draw endpoint
-	router.HandleFunc("/dashboard/example", dashboard).Methods("GET")
+	http.HandleFunc("/dashboard/example", dashboard)
 
 	// use goroutine to serve endpoint
-	http.ListenAndServe(":8080", router)
+	http.ListenAndServe(":8080", nil)
 }
