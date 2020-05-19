@@ -19,6 +19,6 @@ type Header struct {
 func (view *View) Draw() {
 	view.Canvas.Open()
 	view.DrawHeader()
-	view.draw()
+	view.Draw()
 	view.Canvas.Close()
 }
