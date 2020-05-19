@@ -1,8 +1,8 @@
 package shapes
 
 import (
-	geo "github.com/medenzon/gobadge/dashboard/svg/geometry"
 	"fmt"
+	geo "gobadge/svg/geometry"
 	"strings"
 )
 

@@ -2,9 +2,9 @@ package dashboard
 
 import (
 	"fmt"
-	"github.com/medenzon/gobadge/dashboard/svg"
-	geo "github.com/medenzon/gobadge/dashboard/svg/geometry"
-	"github.com/medenzon/gobadge/dashboard/svg/style"
+	"gobadge/svg"
+	geo "gobadge/svg/geometry"
+	"gobadge/svg/style"
 	"log"
 	"math"
 	"strings"
