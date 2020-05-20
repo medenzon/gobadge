@@ -6,15 +6,12 @@ import (
 	geo "gobadge/svg/geometry"
 	"gobadge/svg/style"
 	"log"
-	"math"
 	"strings"
 )
 
-func (view *View) draw() {
+func (view *View) draw(count int, rows int, cols int) {
 
-	index, count := 0, len(view.Badges)
-	split := float64(count) / float64(view.Columns)
-	rows, cols := int(math.Ceil(split)), view.Columns
+	index := 0
 
 	for col := 0; col < cols; col++ {
 

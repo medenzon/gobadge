@@ -12,7 +12,7 @@ type Badge struct {
 }
 
 func (badge Badge) Draw(canvas *svg.Canvas) {
-	canvas.Open()
+	canvas.Open(float64(badgeW), float64(badgeH))
 	origin := geo.Coordinate{X: 0, Y: 0}
 	badge.draw(canvas, origin)
 	canvas.Close()
