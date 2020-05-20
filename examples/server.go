@@ -61,11 +61,18 @@ var dashboard = func(writer http.ResponseWriter, request *http.Request) {
 	view.Draw()
 }
 
+const (
+	port  = ":8080"
+	route = "/dashboard/example"
+)
+
 func main() {
 
 	// draw endpoint
-	http.HandleFunc("/dashboard/example", dashboard)
+	http.HandleFunc(route, dashboard)
+
+	log.Printf("listening on http://localhost%s%s", port, route)
 
 	// use goroutine to serve endpoint
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(port, nil)
 }
