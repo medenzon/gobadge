@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	geo "gobadge/svg/geometry"
+	geo "github.com/medenzon/gobadge/svg/geometry"
 )
 
 type Rect struct {

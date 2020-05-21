@@ -2,7 +2,7 @@ package style
 
 import (
 	"fmt"
-	"gobadge/svg/shapes"
+	"github.com/medenzon/gobadge/svg/shapes"
 	"strings"
 )
 

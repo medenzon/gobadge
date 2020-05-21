@@ -1,8 +1,9 @@
 package dashboard
 
 import (
-	"gobadge/svg"
 	"math"
+
+	"github.com/medenzon/gobadge/svg"
 )
 
 type View struct {

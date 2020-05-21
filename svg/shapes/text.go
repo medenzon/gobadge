@@ -2,7 +2,7 @@ package shapes
 
 import (
 	"fmt"
-	geo "gobadge/svg/geometry"
+	geo "github.com/medenzon/gobadge/svg/geometry"
 	"strings"
 )
 
